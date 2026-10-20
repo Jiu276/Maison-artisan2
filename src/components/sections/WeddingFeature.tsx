@@ -4,26 +4,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const weddingItems = [
+const pieces = [
   {
-    title: "Wedding Favor Bags",
-    image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=85&fit=crop",
-    desc: "Delicate, personalized favor bags that guests will cherish long after the celebration ends.",
+    title: "Atelier Tote",
+    href: "/collections/atelier-tote",
+    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&q=85&fit=crop",
+    desc: "A structured tote in vegetable-tanned leather. $428.",
   },
   {
-    title: "Bride Gift Bags",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=85&fit=crop",
-    desc: "Luxurious gift bags for the bridal party - as beautiful as the moments they hold.",
+    title: "Saddle Crossbody",
+    href: "/collections/saddle-crossbody",
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=85&fit=crop",
+    desc: "A curved flap and an adjustable strap. $348.",
   },
   {
-    title: "Luxury Welcome Bags",
-    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=85&fit=crop",
-    desc: "First impressions matter. Welcome your guests with packaging that sets the tone for the entire event.",
+    title: "Classic Bifold",
+    href: "/collections/classic-bifold",
+    image: "https://images.unsplash.com/photo-1606503825008-909a67e63c3d?w=600&q=85&fit=crop",
+    desc: "Six card slots and a skived spine. $128.",
   },
   {
-    title: "Personalized Packaging",
-    image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=600&q=85&fit=crop",
-    desc: "Monograms, custom printing, bespoke colors - your wedding aesthetic, down to the last detail.",
+    title: "Leather Journal",
+    href: "/collections/leather-journal",
+    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=85&fit=crop",
+    desc: "A soft cover for an A5 notebook. $118.",
   },
 ];
 
@@ -33,23 +37,22 @@ export default function WeddingFeature() {
       <div className="container-luxury">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="section-label">Wedding Collection</span>
+          <span className="section-label">Start here</span>
           <h2 className="font-display text-4xl lg:text-5xl text-charcoal-800 mb-4 leading-tight">
-            Where every detail<br />
-            <em>becomes a memory</em>
+            Four pieces people<br />
+            <em>carry every day</em>
           </h2>
           <div className="divider-gold" />
           <p className="text-charcoal-700/60 text-base leading-relaxed">
-            Our bridal collection is crafted with one intention: to make every
-            element of your wedding as beautiful and intentional as your love story.
+            Open any of them to choose a color and add it to your bag. The rest of the shop is one page away.
           </p>
         </div>
 
         {/* Full-width feature image */}
         <div className="relative h-64 sm:h-80 lg:h-[480px] mb-4 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=1600&q=85&fit=crop"
-            alt="Luxury wedding table setting with handmade bags and floral arrangements"
+            src="https://images.unsplash.com/photo-1524498250077-390f9e378fc0?w=1600&q=85&fit=crop"
+            alt="Leather goods arranged on a studio table"
             fill
             className="object-cover object-center"
             sizes="100vw"
@@ -57,18 +60,18 @@ export default function WeddingFeature() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ivory-100/80" />
           <div className="absolute bottom-8 left-8 right-8 text-center">
             <p className="font-serif italic text-charcoal-800 text-xl lg:text-2xl text-balance">
-              &ldquo;Packaging so beautiful, guests asked where to buy one.&rdquo;
+              &ldquo;It looks better after a year than it did on the first day.&rdquo;
             </p>
             <p className="text-xs tracking-widest uppercase text-charcoal-700/50 mt-2 font-sans">
-              - Sarah M., Wedding Planner, New York
+              - Elena P., customer, Lisbon
             </p>
           </div>
         </div>
 
         {/* 4-column product grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-          {weddingItems.map((item) => (
-            <div key={item.title} className="group cursor-pointer">
+          {pieces.map((item) => (
+            <Link key={item.href} href={item.href} className="group">
               <div className="relative h-72 overflow-hidden mb-4">
                 <Image
                   src={item.image}
@@ -81,14 +84,14 @@ export default function WeddingFeature() {
               </div>
               <h3 className="font-display text-xl text-charcoal-800 mb-2">{item.title}</h3>
               <p className="text-sm text-charcoal-700/60 leading-relaxed">{item.desc}</p>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* CTA */}
         <div className="text-center">
-          <Link href="/collections/wedding" className="btn-primary group">
-            Explore Wedding Collection
+          <Link href="/collections" className="btn-primary group">
+            Shop all pieces
             <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>

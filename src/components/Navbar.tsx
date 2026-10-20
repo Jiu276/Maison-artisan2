@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, ShoppingBag, X } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 const navLinks = [
-  { href: "/collections", label: "Collections" },
-  { href: "/custom", label: "Custom Design" },
+  { href: "/collections", label: "Shop" },
+  { href: "/custom", label: "The Craft" },
   { href: "/about", label: "Our Story" },
   { href: "/contact", label: "Contact" },
 ];
@@ -14,6 +15,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { count } = useCart();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -52,19 +54,33 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-6">
-            <Link href="/contact" className="btn-primary py-2.5 px-6 text-xs">
-              Request Quote
+            <Link href="/cart" className="relative text-charcoal-800 hover:text-gold-500" aria-label="Shopping bag">
+              <ShoppingBag size={20} />
+              {count > 0 && (
+                <span className="absolute -top-2 -right-2 min-w-4 h-4 px-1 bg-gold-500 text-ivory-50 text-[10px] leading-4 text-center">
+                  {count}
+                </span>
+              )}
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="lg:hidden p-2 -mr-2 text-charcoal-800"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <Link href="/cart" className="relative p-2 text-charcoal-800" aria-label="Shopping bag">
+              <ShoppingBag size={20} />
+              {count > 0 && (
+                <span className="absolute top-0 right-0 min-w-4 h-4 px-1 bg-gold-500 text-ivory-50 text-[10px] leading-4 text-center">
+                  {count}
+                </span>
+              )}
+            </Link>
+            <button
+              className="p-2 -mr-2 text-charcoal-800"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -102,17 +118,17 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/cart"
             className="btn-primary mt-4"
             onClick={() => setMenuOpen(false)}
           >
-            Request a Quote
+            Shopping bag{count > 0 ? ` (${count})` : ""}
           </Link>
         </nav>
 
         <div className="container-luxury pb-10">
           <p className="text-xs text-charcoal-700/40 tracking-widest uppercase text-center">
-            handcrafted · sustainable · bespoke
+            hand-cut · saddle-stitched · made for you
           </p>
         </div>
       </div>

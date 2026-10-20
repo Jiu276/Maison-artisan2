@@ -3,38 +3,38 @@
 const steps = [
   {
     number: "01",
-    title: "Share Your Vision",
+    title: "Choose a piece",
     description:
-      "Tell us about your project - the occasion, brand identity, desired materials, quantities, and any inspiration images. Our team listens carefully to understand every nuance of your vision.",
-    detail: "via inquiry form or email",
+      "Open a tote, a wallet, or a small good. The price on the page is the retail price. Nothing is quoted and nothing is sold by the hundred.",
+    detail: "One piece is enough",
   },
   {
     number: "02",
-    title: "Design Confirmation",
+    title: "Pick a color",
     description:
-      "Our design team creates detailed technical drawings and digital mockups. We refine together until every element feels exactly right - from typography to texture.",
-    detail: "2-4 business days",
+      "Each piece is offered in the hides we actually have on the bench. Cognac, black, olive, tan. What you select is what we cut.",
+    detail: "Shown on the product page",
   },
   {
     number: "03",
-    title: "Sample Production",
+    title: "Add it to your bag",
     description:
-      "Before full production, we handcraft a physical sample and ship it to you for approval. Touch it. Feel it. Confirm it's perfect.",
-    detail: "7-10 business days",
+      "Set a quantity and add it. The bag stays in this browser so you can keep looking. Checkout is the next step we have not opened yet.",
+    detail: "Saved on this device",
   },
   {
     number: "04",
-    title: "Mass Production",
+    title: "We cut and stitch",
     description:
-      "Upon sample approval, our artisans begin full production with rigorous quality control at every stage. No shortcuts. No compromises.",
-    detail: "15-25 business days",
+      "When an order is placed, the hide is cut, the edges are burnished, and the seams are saddle-stitched. Small batches, not a production line.",
+    detail: "Made after you order",
   },
   {
     number: "05",
-    title: "Worldwide Delivery",
+    title: "It arrives at your door",
     description:
-      "Your order is carefully packaged and dispatched with full tracking. We ship to boutiques, event venues, warehouses, and residences across the globe.",
-    detail: "DHL / FedEx / Sea freight",
+      "The piece is packed in tissue and a plain box, then shipped to you. Complimentary, with tracking.",
+    detail: "5-8 business days",
   },
 ];
 
@@ -52,8 +52,7 @@ export default function CustomProcess() {
             </h2>
           </div>
           <p className="text-charcoal-700/60 leading-relaxed max-w-md lg:text-right lg:ml-auto">
-            Our bespoke process is designed to be seamless and transparent.
-            You&apos;ll always know where your order stands, and you&apos;ll always love the result.
+            From the shop to the bench. You choose the piece. We cut it from a hide and send it to you.
           </p>
         </div>
 
@@ -102,17 +101,17 @@ export default function CustomProcess() {
         <div className="mt-16 p-8 border border-ivory-200 bg-ivory-100 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
           <div>
             <h3 className="font-serif text-charcoal-800 text-lg font-medium mb-1">
-              Flexible minimum order quantities
+              Buy one. Keep it for years.
             </h3>
             <p className="text-sm text-charcoal-700/60">
-              We work with boutique studios and global enterprises alike. Starting from as low as 50 units for select collections.
+              There is no wholesale minimum. Shipping is included, and stitch repairs are complimentary for a year.
             </p>
           </div>
           <div className="flex gap-6 text-center shrink-0">
             {[
-              { value: "50+", label: "Min. Order" },
-              { value: "30", label: "Day Lead Time" },
-              { value: "Free", label: "Design Consult" },
+              { value: "1", label: "Piece minimum" },
+              { value: "Free", label: "Shipping" },
+              { value: "1 year", label: "Stitch repairs" },
             ].map((item) => (
               <div key={item.label}>
                 <p className="font-display text-2xl text-charcoal-800">{item.value}</p>

@@ -6,33 +6,33 @@ import { Leaf, Brush, Globe, Package, Star } from "lucide-react";
 const features = [
   {
     icon: Brush,
-    title: "Artisan Craftsmanship",
+    title: "Cut and stitched by hand",
     description:
-      "Every bag is individually handcrafted by skilled artisans with over a decade of experience in luxury paper and textile arts.",
+      "Each piece is saddle-stitched with waxed linen. You can see the stitches. They are meant to be repaired, not replaced.",
   },
   {
     icon: Star,
-    title: "Bespoke Design Service",
+    title: "A price, not a quote",
     description:
-      "From initial sketch to final product, our design team collaborates with you to create packaging that perfectly embodies your brand.",
+      "These are retail pieces. The number on the page is the number you pay. There is no minimum order and no proposal to wait for.",
   },
   {
     icon: Package,
-    title: "Premium Materials",
+    title: "Full-grain hides",
     description:
-      "We source only the finest materials - from heavyweight European paper to ethically sourced cotton ribbon and gold foil.",
+      "We use the top of the hide, vegetable-tanned where the piece should darken with use, and bridle leather where it should stay firm.",
   },
   {
     icon: Globe,
-    title: "Worldwide Delivery",
+    title: "Ships to your door",
     description:
-      "Reliable international shipping with full tracking. We deliver to boutiques, event venues, and warehouses across 40+ countries.",
+      "Complimentary shipping. A piece leaves the studio for you, not for a warehouse or a boutique buyer.",
   },
   {
     icon: Leaf,
-    title: "Sustainable by Design",
+    title: "Made to be kept",
     description:
-      "We use eco-conscious materials and responsible production methods. Beauty should never come at the earth's expense.",
+      "Leather that can be conditioned and restitched will outlast a season. We offer a year of complimentary stitch repairs.",
   },
 ];
 
@@ -46,8 +46,8 @@ export default function WhyChooseUs() {
             {/* Main image */}
             <div className="relative aspect-[3/4] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1556742400-b5b7c512f1d7?w=900&q=85&fit=crop"
-                alt="Artisan hands crafting a luxury paper bag with ribbon"
+                src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=900&q=85&fit=crop"
+                alt="Cognac leather tote with structured sides"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -56,8 +56,8 @@ export default function WhyChooseUs() {
             {/* Floating accent image */}
             <div className="absolute -bottom-8 -right-8 w-48 h-48 lg:w-64 lg:h-64 border-4 border-charcoal-800 overflow-hidden hidden sm:block">
               <Image
-                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=400&q=85&fit=crop"
-                alt="Close-up of handmade bag detail"
+                src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=400&q=85&fit=crop"
+                alt="Close view of a slim leather wallet"
                 fill
                 className="object-cover"
                 sizes="256px"
@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
               <em className="text-gold-300">the details</em>
             </h2>
             <p className="text-ivory-200/60 mb-12 leading-relaxed max-w-md">
-              We don&apos;t simply produce bags. We craft experiences - pieces that make your brand unforgettable from the very first touch.
+              We do not make packaging for other brands. We make leather goods you can buy, carry, and keep.
             </p>
 
             <div className="space-y-8">

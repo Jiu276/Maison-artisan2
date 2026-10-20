@@ -3,6 +3,7 @@ import { DM_Sans, Cormorant_Garamond, Playfair_Display } from "next/font/google"
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Providers from "@/components/Providers";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -26,22 +27,19 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Maison Artisan - Luxury Custom Handmade Bags",
+    default: "Maison Artisan - Handmade Leather Goods",
     template: "%s | Maison Artisan",
   },
   description:
-    "Premium custom handmade bags crafted for weddings, luxury events, and global brands. Bespoke paper bags, gift packaging, and bridal collections made with the finest materials.",
+    "Handmade leather bags, wallets, and small goods, sold directly to you. Full-grain hides, saddle-stitched, ready to add to your bag.",
   keywords: [
-    "custom handmade bags",
-    "custom wedding bags",
-    "luxury gift bags",
-    "personalized wedding favor bags",
-    "custom paper bags wholesale",
-    "branded packaging bags",
-    "bespoke luxury packaging",
-    "wedding favor packaging",
-    "luxury gift packaging",
-    "custom event bags",
+    "handmade leather tote",
+    "leather crossbody bag",
+    "leather wallet",
+    "full grain leather goods",
+    "vegetable tanned leather",
+    "leather duffle",
+    "artisan leather accessories",
   ],
   authors: [{ name: "Maison Artisan" }],
   creator: "Maison Artisan",
@@ -50,23 +48,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://maisonartisan.com",
     siteName: "Maison Artisan",
-    title: "Maison Artisan - Luxury Custom Handmade Bags",
+    title: "Maison Artisan - Handmade Leather Goods",
     description:
-      "Premium custom handmade bags for weddings, luxury events, and global brands.",
+      "Handmade leather bags, wallets, and small goods, sold directly to you.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Maison Artisan Luxury Handmade Bags",
+        alt: "Maison Artisan handmade leather goods",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maison Artisan - Luxury Custom Handmade Bags",
+    title: "Maison Artisan - Handmade Leather Goods",
     description:
-      "Premium custom handmade bags for weddings, luxury events, and global brands.",
+      "Handmade leather bags, wallets, and small goods, sold directly to you.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -90,9 +88,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${cormorant.variable} ${playfair.variable}`}>
       <body className="font-sans bg-ivory-50 text-charcoal antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

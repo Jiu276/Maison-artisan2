@@ -9,9 +9,9 @@ import Testimonials from "@/components/sections/Testimonials";
 import InquiryBand from "@/components/sections/InquiryBand";
 
 export const metadata: Metadata = {
-  title: "Maison Artisan - Custom Handmade Bags for Weddings & Luxury Brands",
+  title: "Handmade Leather Goods",
   description:
-    "Bespoke handmade bags for weddings, luxury events, boutique brands, and corporate gifting. Premium materials, artisan craftsmanship, worldwide delivery.",
+    "Shop handmade leather totes, crossbody bags, wallets, and small goods from Maison Artisan. Sold directly, ready to add to your bag.",
 };
 
 export default function HomePage() {

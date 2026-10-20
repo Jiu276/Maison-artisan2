@@ -7,18 +7,18 @@ import { ArrowRight, Leaf, Award, Heart } from "lucide-react";
 const values = [
   {
     icon: Heart,
-    label: "Made with Heart",
-    text: "Every stitch, every fold, every ribbon - placed with intention.",
+    label: "Sold direct",
+    text: "You buy from the studio. There is no boutique markup and no wholesale desk.",
   },
   {
     icon: Award,
-    label: "Uncompromising Quality",
-    text: "We inspect every piece before it leaves our atelier.",
+    label: "Inspected by hand",
+    text: "Edges, stitches, and hardware are checked before a piece is packed.",
   },
   {
     icon: Leaf,
-    label: "Sustainably Sourced",
-    text: "FSC-certified paper, water-based inks, minimal waste.",
+    label: "Hides, not paper",
+    text: "Full-grain and bridle leather that can be conditioned and repaired.",
   },
 ];
 
@@ -32,8 +32,8 @@ export default function BrandStory() {
             {/* Tall primary image */}
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=800&q=85&fit=crop"
-                alt="Artisan workshop crafting luxury bags by hand"
+                src="https://images.unsplash.com/photo-1473188588951-666fce8e7c68?w=800&q=85&fit=crop"
+                alt="Hands working a piece of leather"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 42vw"
@@ -42,8 +42,8 @@ export default function BrandStory() {
             {/* Small accent image - offset bottom-right */}
             <div className="absolute -bottom-6 -right-6 lg:-right-12 w-36 h-36 lg:w-48 lg:h-48 overflow-hidden border-4 border-ivory-50 hidden sm:block">
               <Image
-                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=85&fit=crop"
-                alt="Natural sustainable materials"
+                src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=85&fit=crop"
+                alt="Black leather bag with a simple silhouette"
                 fill
                 className="object-cover"
                 sizes="192px"
@@ -52,7 +52,7 @@ export default function BrandStory() {
             {/* Quote accent */}
             <div className="absolute top-8 -left-4 lg:-left-8 max-w-[180px] bg-gold-500 p-5 hidden lg:block">
               <p className="font-serif italic text-ivory-50 text-sm leading-relaxed">
-                &ldquo;Handmade is not a limitation. It&apos;s our greatest advantage.&rdquo;
+                &ldquo;One hide. One person. One piece.&rdquo;
               </p>
             </div>
           </div>
@@ -66,21 +66,13 @@ export default function BrandStory() {
             </h2>
             <div className="space-y-5 text-charcoal-700/70 leading-relaxed mb-10">
               <p>
-                Maison Artisan was founded on a simple conviction: that the packaging
-                around a gift should be as thoughtful as the gift itself. In a world of
-                mass production, we chose a different path - one where every bag is cut,
-                folded, and finished by hand.
+                Maison Artisan began as a studio making goods for other businesses. The work was careful, and the buyer was always a company. We changed that.
               </p>
               <p>
-                Our atelier brings together traditional papercraft techniques and modern
-                design sensibility to create packaging that elevates every occasion. From
-                intimate weddings in the Cotswolds to flagship retail launches in Manhattan,
-                our work has graced some of the world&apos;s most discerning events.
+                The shop is now for the person who will carry the piece. Full-grain totes, a saddle crossbody, wallets, a belt, a journal cover. Prices are on the page. You add what you want.
               </p>
               <p>
-                We believe in the permanence of a beautiful object. Our bags aren&apos;t
-                discarded - they&apos;re kept, repurposed, remembered. That&apos;s the
-                Maison Artisan promise.
+                The leather is still cut by hand. The difference is who it is for: you, not a purchasing department.
               </p>
             </div>
 

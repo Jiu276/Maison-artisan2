@@ -5,57 +5,30 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "The welcome bags for our wedding were absolutely breathtaking. Every single guest commented on them. Maison Artisan elevated our entire aesthetic �?I couldn't have asked for a more perfect partner.",
-    author: "Alexandra Whitfield",
-    role: "Bride, Hampshire UK",
-    company: "Private Client",
+      "The Atelier Tote arrived heavier than I expected, in a good way. The cognac has already darkened along the handle.",
+    author: "Elena Petrov",
+    role: "Customer",
+    company: "Lisbon",
+    stars: 5,
+    initial: "E",
+  },
+  {
+    quote:
+      "I bought the slim wallet first, then the belt. Both are plain, both are still the things I reach for.",
+    author: "Marcus Hale",
+    role: "Customer",
+    company: "Chicago",
+    stars: 5,
+    initial: "M",
+  },
+  {
+    quote:
+      "The saddle bag sits close and does not swing. Black leather, brass that is not shiny. Exactly the photo, only better in the hand.",
+    author: "Aiko Sato",
+    role: "Customer",
+    company: "Osaka",
     stars: 5,
     initial: "A",
-  },
-  {
-    quote:
-      "We've been sourcing custom branded bags from Maison Artisan for our boutique launches for three years. The quality is consistently exceptional and the team always exceeds our expectations on design.",
-    author: "Camille Durand",
-    role: "Creative Director",
-    company: "Maison Lumière Paris",
-    stars: 5,
-    initial: "C",
-  },
-  {
-    quote:
-      "As a luxury event planner, packaging is the first and last impression. Maison Artisan understands this intrinsically. Their attention to detail is unmatched �?they are the only supplier I trust for high-end events.",
-    author: "Victoria Ashworth",
-    role: "Lead Event Planner",
-    company: "The Ashworth Agency, New York",
-    stars: 5,
-    initial: "V",
-  },
-  {
-    quote:
-      "Our corporate gift program was completely transformed by Maison Artisan's bespoke boxes and bags. The response from our clients has been extraordinary. This is packaging that tells a story.",
-    author: "James Holloway",
-    role: "Head of Brand Experience",
-    company: "Helix Capital, London",
-    stars: 5,
-    initial: "J",
-  },
-  {
-    quote:
-      "The sample arrived in two weeks and was exactly what we envisioned. Full production was smooth, on time, and every piece was individually inspected. This is how a luxury supplier should operate.",
-    author: "Sofía Müller",
-    role: "Procurement Manager",
-    company: "Boutique Zurich AG",
-    stars: 5,
-    initial: "S",
-  },
-  {
-    quote:
-      "I've worked with suppliers across Europe and Asia. Maison Artisan is in a category of their own. The craftsmanship is extraordinary, and the team communicates beautifully throughout the entire process.",
-    author: "Nathaniel Brooks",
-    role: "Co-Founder",
-    company: "Thornton & Brooks Fine Gifts, Boston",
-    stars: 5,
-    initial: "N",
   },
 ];
 
@@ -75,10 +48,10 @@ export default function Testimonials() {
       <div className="container-luxury">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="section-label">Client Stories</span>
+          <span className="section-label">From customers</span>
           <h2 className="font-display text-4xl lg:text-5xl text-charcoal-800 mb-3">
-            Trusted by discerning<br />
-            <em>brands worldwide</em>
+            Carried, not<br />
+            <em>commissioned</em>
           </h2>
           <div className="divider-gold" />
         </div>
@@ -116,10 +89,10 @@ export default function Testimonials() {
         {/* Trust badges */}
         <div className="mt-16 pt-12 border-t border-ivory-200 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { value: "500+", label: "Projects Delivered" },
-            { value: "40+", label: "Countries" },
-            { value: "4.9/5", label: "Average Rating" },
-            { value: "98%", label: "On-time Delivery" },
+            { value: "8", label: "Pieces" },
+            { value: "1", label: "Minimum order" },
+            { value: "Free", label: "Shipping" },
+            { value: "1 year", label: "Stitch repairs" },
           ].map((stat) => (
             <div key={stat.label}>
               <p className="font-display text-3xl lg:text-4xl text-charcoal-800 mb-1">{stat.value}</p>
